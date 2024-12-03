@@ -1,13 +1,8 @@
-========================
 Οδηγίες Στυλ για Ψευδοκώδικα
-
-
-Δεν υπάρχει μία, σωστή μέθοδος για να μορφοποιηθεί ο κώδικας. Ωστόσο, υπάρχουν πολλοί λάθος (ή τουλάχιστον κακοί) τρόποι. Ακολουθήστε τις οδηγίες παρακάτω για να βελτιώσετε την αναγνωσιμότητα του κώδικά σας.
-
+============================
 
 1. Τελεστές
 ===========
-
 Αριθμητικοί
 -----------
 - Πρόσθεση `+`
@@ -31,7 +26,6 @@
 
 2. Τύποι Δεδομένων
 ==================
-
 - `INTEGER`: Ακέραιος
 - `REAL`: Πραγματικός
 - `BOOLEAN`: Δυαδικές (Boolean) Μεταβλητές
@@ -39,7 +33,6 @@
 
 3. Λέξεις Κλειδιά
 =================
-
 Βρόχοι (Loops)
 --------------
 - `ΓΙΑ (συνθήκη) ΕΠΑΝΑΛΑΒΕ`: Βρόχος επανάληψης με αρχικοποίηση, συνθήκη.
@@ -54,43 +47,15 @@
 
 4. Δομές Ελέγχου Ροής
 =====================
-
 - `ΕΑΝ (συνθήκη) ΤΟΤΕ`: Έλεγχος μιας συνθήκης και εκτέλεση κώδικα αν η συνθήκη είναι αληθής.
 - `ΑΛΛΙΩΣ`: Εκτέλεση κώδικα αν η προηγούμενη συνθήκη δεν είναι αληθής.
 
+Οδηγίες Στυλ για Ψευδοκώδικα
+============================
 
-Getting Categories
-^^^^^^^^^^^^^^^^^^
+.. toctree::
+   :caption: Style Guides
+   :hidden:
+   :maxdepth: 1
 
-.. http:get:: /dining/categories
-
-    :synopsis: Returns a JSON array of objects, each of which represents a category of food. For example, https://api.cs50.io/dining/categories.
-
-    :statuscode 200: Always returned.
-
-    :>jsonarr integer id: A category's unique identifer. Usable as a primary key in a databse.
-    :>jsonarr string name: A category's name.
-
-    **Example: Getting All Categories**
-
-    https://api.cs50.io/dining/categories
-
-    .. tabs::
-
-        .. code-tab:: python
-
-            import requests
-
-            # Get categories
-            response = requests.get("https://api.cs50.io/dining/categories")
-
-            # Convert JSON to list of dicts
-            categories = response.json()
-
-            # Print each category's name
-            for category in categories:
-                print(category["name"])
-
-        .. code-tab:: bash cURL
-
-            curl "https://api.cs50.io/dining/categories"
+   c<c/type>
