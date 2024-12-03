@@ -13,12 +13,13 @@ author = 'Achilleas Makris'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
+extensions = ['myst_parser']
 
 templates_path = ['_templates']
 exclude_patterns = ["sphinx_rtd_theme"]
 
-language = 'gr'
+language = 'en'
+source_suffix = ['.rst', '.md']
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output

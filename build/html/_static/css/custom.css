@@ -14,28 +14,7 @@ h1 {
     font-size: 36px;  /* Heading level 1 */
     color: #0d6efd; /* Light blue from manual.cs50.io */
     font-weight: bold;
-    margin-right: 0.5em;
 }
-
-h2 {
-    font-size: 28px;  /* Heading level 2 */
-    color: #0d6efd; /* Light blue from manual.cs50.io */
-    font-weight: bold;
-    margin-right: 0.5em;
-}
-
-h3 {
-    font-size: 24px;  /* Heading level 3 */
-}
-
-h4 {
-    font-size: 20px;  /* Heading level 4 */
-}
-
-h5 {
-    font-size: 18px;  /* Heading level 5 */
-}
-
 
 
 /* Styling for list items */
@@ -48,10 +27,16 @@ ul li {
 ul, ol {
     font-weight: bold; /* Bold font for list items */
     line-height: 18px;
+    text-transform: none;
 }
 
 /* Specific styling for unordered lists */
 ul {
+    line-height: 18px;
+}
+/* Remove numbers from ordered lists (ol) */
+ol {
+    list-style-type: none;  /* Removes numbering */
     line-height: 18px;
 }
 
