@@ -1,17 +1,96 @@
-.. Greek Pseudocode Manual documentation master file, created by
-   sphinx-quickstart on Tue Dec  3 00:20:16 2024.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-Greek Pseudocode Manual documentation
-=====================================
-
-Add your content using ``reStructuredText`` syntax. See the
-`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-documentation for details.
+========================
+Οδηγίες Στυλ για Ψευδοκώδικα
 
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+Δεν υπάρχει μία, σωστή μέθοδος για να μορφοποιηθεί ο κώδικας. Ωστόσο, υπάρχουν πολλοί λάθος (ή τουλάχιστον κακοί) τρόποι. Ακολουθήστε τις οδηγίες παρακάτω για να βελτιώσετε την αναγνωσιμότητα του κώδικά σας.
 
+
+1. Τελεστές
+===========
+
+Αριθμητικοί
+-----------
+- Πρόσθεση `+`
+- Αφαίρεση `-`
+- Πολλαπλασιασμός `*`
+- Διαίρεση `/`
+- Ακέραια διαίρεση `DIV`
+- Υπόλοιπο `MOD`
+- Ισότητα `=`
+- Ανισότητα `<>`
+- Μεγαλύτερο από `>`
+- Μικρότερο από `<`
+- Μεγαλύτερο ή ίσο από `>=`
+- Μικρότερο ή ίσο από `<=`
+
+Λογικοί
+-------
+- `AND`: Λογικό ΚΑΙ
+- `OR`: Λογικό Ή
+- `NOT`: Λογική άρνηση
+
+2. Τύποι Δεδομένων
+==================
+
+- `INTEGER`: Ακέραιος
+- `REAL`: Πραγματικός
+- `BOOLEAN`: Δυαδικές (Boolean) Μεταβλητές
+- `ARRAY [1..N] OF τύπος`: Πίνακας
+
+3. Λέξεις Κλειδιά
+=================
+
+Βρόχοι (Loops)
+--------------
+- `ΓΙΑ (συνθήκη) ΕΠΑΝΑΛΑΒΕ`: Βρόχος επανάληψης με αρχικοποίηση, συνθήκη.
+- `ΕΝΟΣΩ (συνθήκη) ΕΠΑΝΑΛΑΒΕ`: Βρόχος επανάληψης με συνθήκη.
+
+Άλλες Λέξεις Κλειδιά
+--------------------
+- `ΑΛΓΟΡΙΘΜΟΣ ονομα`: Ονομα αλγορίθμου.
+- `ΔΕΔΟΜΕΝΑ`: Δηλώνει μεταβλητές.
+- `ΑΡΧΗ`: Αρχή του προγράμματος.
+- `ΤΕΛΟΣ`: Τέλος του προγράμματος.
+
+4. Δομές Ελέγχου Ροής
+=====================
+
+- `ΕΑΝ (συνθήκη) ΤΟΤΕ`: Έλεγχος μιας συνθήκης και εκτέλεση κώδικα αν η συνθήκη είναι αληθής.
+- `ΑΛΛΙΩΣ`: Εκτέλεση κώδικα αν η προηγούμενη συνθήκη δεν είναι αληθής.
+
+
+Getting Categories
+^^^^^^^^^^^^^^^^^^
+
+.. http:get:: /dining/categories
+
+    :synopsis: Returns a JSON array of objects, each of which represents a category of food. For example, https://api.cs50.io/dining/categories.
+
+    :statuscode 200: Always returned.
+
+    :>jsonarr integer id: A category's unique identifer. Usable as a primary key in a databse.
+    :>jsonarr string name: A category's name.
+
+    **Example: Getting All Categories**
+
+    https://api.cs50.io/dining/categories
+
+    .. tabs::
+
+        .. code-tab:: python
+
+            import requests
+
+            # Get categories
+            response = requests.get("https://api.cs50.io/dining/categories")
+
+            # Convert JSON to list of dicts
+            categories = response.json()
+
+            # Print each category's name
+            for category in categories:
+                print(category["name"])
+
+        .. code-tab:: bash cURL
+
+            curl "https://api.cs50.io/dining/categories"

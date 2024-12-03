@@ -6,9 +6,10 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Greek Pseudocode Manual documentation &mdash; Greek Pseudocode Manual  documentation</title>
+  <title>1. Τελεστές &mdash; Greek Pseudocode Manual  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=4e009835" />
 
   
       <script src="_static/jquery.js?v=5d32c60e"></script>
@@ -42,7 +43,18 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <!-- Local TOC -->
               <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">Greek Pseudocode Manual documentation</a></li>
+<li><a class="reference internal" href="#">1. Τελεστές</a><ul>
+<li><a class="reference internal" href="#id2">Αριθμητικοί</a></li>
+<li><a class="reference internal" href="#id3">Λογικοί</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id4">2. Τύποι Δεδομένων</a></li>
+<li><a class="reference internal" href="#id5">3. Λέξεις Κλειδιά</a><ul>
+<li><a class="reference internal" href="#loops">Βρόχοι (Loops)</a></li>
+<li><a class="reference internal" href="#id6">Άλλες Λέξεις Κλειδιά</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id7">4. Δομές Ελέγχου Ροής</a></li>
 </ul>
 </div>
         </div>
@@ -59,7 +71,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Greek Pseudocode Manual documentation</li>
+      <li class="breadcrumb-item active">1. Τελεστές</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -69,13 +81,69 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="greek-pseudocode-manual-documentation">
-<h1>Greek Pseudocode Manual documentation<a class="headerlink" href="#greek-pseudocode-manual-documentation" title="Link to this heading"></a></h1>
-<p>Add your content using <code class="docutils literal notranslate"><span class="pre">reStructuredText</span></code> syntax. See the
-<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html">reStructuredText</a>
-documentation for details.</p>
-<div class="toctree-wrapper compound">
-</div>
+  <p>Δεν υπάρχει μία, σωστή μέθοδος για να μορφοποιηθεί ο κώδικας. Ωστόσο, υπάρχουν πολλοί λάθος (ή τουλάχιστον κακοί) τρόποι. Ακολουθήστε τις οδηγίες παρακάτω για να βελτιώσετε την αναγνωσιμότητα του κώδικά σας.</p>
+<section id="id1">
+<h1>1. Τελεστές<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
+<section id="id2">
+<h2>Αριθμητικοί<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Πρόσθεση <cite>+</cite></p></li>
+<li><p>Αφαίρεση <cite>-</cite></p></li>
+<li><p>Πολλαπλασιασμός <cite>*</cite></p></li>
+<li><p>Διαίρεση <cite>/</cite></p></li>
+<li><p>Ακέραια διαίρεση <cite>DIV</cite></p></li>
+<li><p>Υπόλοιπο <cite>MOD</cite></p></li>
+<li><p>Ισότητα <cite>=</cite></p></li>
+<li><p>Ανισότητα <cite>&lt;&gt;</cite></p></li>
+<li><p>Μεγαλύτερο από <cite>&gt;</cite></p></li>
+<li><p>Μικρότερο από <cite>&lt;</cite></p></li>
+<li><p>Μεγαλύτερο ή ίσο από <cite>&gt;=</cite></p></li>
+<li><p>Μικρότερο ή ίσο από <cite>&lt;=</cite></p></li>
+</ul>
+</section>
+<section id="id3">
+<h2>Λογικοί<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>AND</cite>: Λογικό ΚΑΙ</p></li>
+<li><p><cite>OR</cite>: Λογικό Ή</p></li>
+<li><p><cite>NOT</cite>: Λογική άρνηση</p></li>
+</ul>
+</section>
+</section>
+<section id="id4">
+<h1>2. Τύποι Δεδομένων<a class="headerlink" href="#id4" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p><cite>INTEGER</cite>: Ακέραιος</p></li>
+<li><p><cite>REAL</cite>: Πραγματικός</p></li>
+<li><p><cite>BOOLEAN</cite>: Δυαδικές (Boolean) Μεταβλητές</p></li>
+<li><p><cite>ARRAY [1..N] OF τύπος</cite>: Πίνακας</p></li>
+</ul>
+</section>
+<section id="id5">
+<h1>3. Λέξεις Κλειδιά<a class="headerlink" href="#id5" title="Link to this heading"></a></h1>
+<section id="loops">
+<h2>Βρόχοι (Loops)<a class="headerlink" href="#loops" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>ΓΙΑ (συνθήκη) ΕΠΑΝΑΛΑΒΕ</cite>: Βρόχος επανάληψης με αρχικοποίηση, συνθήκη.</p></li>
+<li><p><cite>ΕΝΟΣΩ (συνθήκη) ΕΠΑΝΑΛΑΒΕ</cite>: Βρόχος επανάληψης με συνθήκη.</p></li>
+</ul>
+</section>
+<section id="id6">
+<h2>Άλλες Λέξεις Κλειδιά<a class="headerlink" href="#id6" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>ΑΛΓΟΡΙΘΜΟΣ ονομα</cite>: Ονομα αλγορίθμου.</p></li>
+<li><p><cite>ΔΕΔΟΜΕΝΑ</cite>: Δηλώνει μεταβλητές.</p></li>
+<li><p><cite>ΑΡΧΗ</cite>: Αρχή του προγράμματος.</p></li>
+<li><p><cite>ΤΕΛΟΣ</cite>: Τέλος του προγράμματος.</p></li>
+</ul>
+</section>
+</section>
+<section id="id7">
+<h1>4. Δομές Ελέγχου Ροής<a class="headerlink" href="#id7" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p><cite>ΕΑΝ (συνθήκη) ΤΟΤΕ</cite>: Έλεγχος μιας συνθήκης και εκτέλεση κώδικα αν η συνθήκη είναι αληθής.</p></li>
+<li><p><cite>ΑΛΛΙΩΣ</cite>: Εκτέλεση κώδικα αν η προηγούμενη συνθήκη δεν είναι αληθής.</p></li>
+</ul>
 </section>
 
 
