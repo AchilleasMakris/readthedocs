@@ -33,9 +33,9 @@
 
 ### Παράδειγμα Συνθήκης
 
-![](./_static/images/1.gif)
+![](https://i.imgur.com/v33yVRq.gif)
 
 ### Παράδειγμα Compile & Run
 
-![](./_static/images/2.gif)
+![](https://i.imgur.com/FdbcR69.gif)
 
