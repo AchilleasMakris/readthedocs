@@ -1,0 +1,187 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Βρόχοι (Loops) &mdash; Greek Pseudocode Manual  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Λέξεις Κλειδιά" href="keywords.html" />
+    <link rel="prev" title="Δομές Ελέγχου Ροής" href="control_structures.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Greek Pseudocode Manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Περιεχόμενα</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="operators.html">Τελεστές</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_types.html">Τύποι Δεδομένων</a></li>
+<li class="toctree-l1"><a class="reference internal" href="control_structures.html">Δομές Ελέγχου Ροής</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Βρόχοι (Loops)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1"><strong>ΓΙΑ</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Παράδειγμα χρήσης του βρόχου <strong>ΓΙΑ</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id3"><strong>ΕΝΟΣΩ</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Παράδειγμα χρήσης του βρόχου <strong>ΕΝΟΣΩ</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id5"><strong>ΕΠΑΝΑΛΑΒΕ ΜΕΧΡΙ</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id6">Παράδειγμα χρήσης του βρόχου <strong>ΕΠΑΝΑΛΑΒΕ - ΜΕΧΡΙ</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="keywords.html">Λέξεις Κλειδιά</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ΕΑΠ Compiler</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="greek_pseudocode_extension.html">ΕΑΠ Compiler &amp; Visual Studio Code</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Greek Pseudocode Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Βρόχοι (Loops)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/vroxoi.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="loops">
+<h1>Βρόχοι (Loops)<a class="headerlink" href="#loops" title="Link to this heading"></a></h1>
+<section id="id1">
+<h2><strong>ΓΙΑ</strong><a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p>Ο βρόχος <strong>ΓΙΑ</strong> στην ψευδογλώσσα είναι ένας επαναληπτικός βρόχος που χρησιμοποιείται για να εκτελείται μια εντολή ή μια σειρά εντολών για έναν συγκεκριμένο αριθμό επαναλήψεων. Η σύνταξή του έχει τη μορφή:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ΓΙΑ</span> <span class="o">&lt;</span><span class="n">μεταβλητή</span><span class="o">&gt;</span> <span class="n">ΑΠΟ</span> <span class="o">&lt;</span><span class="n">αρχική_τιμή</span><span class="o">&gt;</span> <span class="n">ΕΩΣ</span> <span class="o">&lt;</span><span class="n">τελική_τιμή</span><span class="o">&gt;</span> <span class="n">ΕΠΑΝΑΛΑΒΕ</span>
+    <span class="o">&lt;</span><span class="n">εντολές</span><span class="o">&gt;</span>
+<span class="n">ΓΙΑ</span><span class="o">-</span><span class="n">ΤΕΛΟΣ</span>
+</pre></div>
+</div>
+<section id="id2">
+<h3>Παράδειγμα χρήσης του βρόχου <strong>ΓΙΑ</strong><a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ΓΙΑ</span> <span class="n">i</span> <span class="n">ΑΠΟ</span> <span class="mi">1</span> <span class="n">ΕΩΣ</span> <span class="mi">5</span> <span class="n">ΕΠΑΝΑΛΑΒΕ</span>
+    <span class="n">ΕΚΤΥΠΩΣΕ</span> <span class="n">i</span>
+<span class="n">ΓΙΑ</span><span class="o">-</span><span class="n">ΤΕΛΟΣ</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id3">
+<h2><strong>ΕΝΟΣΩ</strong><a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<p>Ο βρόχος <strong>ΕΝΟΣΩ</strong> επαναλαμβάνει μια εντολή ή μπλοκ εντολών όσο μια συνθήκη είναι αληθής.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ΕΝΟΣΩ</span> <span class="o">&lt;</span><span class="n">συνθήκη</span><span class="o">&gt;</span> <span class="n">ΕΠΑΝΑΛΑΒΕ</span>
+    <span class="o">&lt;</span><span class="n">εντολές</span><span class="o">&gt;</span>
+<span class="n">ΕΝΟΣΩ</span><span class="o">-</span><span class="n">ΤΕΛΟΣ</span>
+</pre></div>
+</div>
+<section id="id4">
+<h3>Παράδειγμα χρήσης του βρόχου <strong>ΕΝΟΣΩ</strong><a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ΕΝΟΣΩ</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span> <span class="n">ΕΠΑΝΑΛΑΒΕ</span>
+    <span class="n">ΕΚΤΥΠΩΣΕ</span> <span class="n">i</span>
+    <span class="n">i</span><span class="o">:=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">ΕΝΟΣΩ</span><span class="o">-</span><span class="n">ΤΕΛΟΣ</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id5">
+<h2><strong>ΕΠΑΝΑΛΑΒΕ ΜΕΧΡΙ</strong><a class="headerlink" href="#id5" title="Link to this heading"></a></h2>
+<p>Ο βρόχος <strong>ΕΠΑΝΑΛΑΒΕ ΜΕΧΡΙ</strong> χρησιμοποιείται για επανάληψη μέχρι μια συνθήκη να γίνει αληθής. Η διαφορά του από τον βρόχο ΕΝΟΣΩ είναι ότι η συνθήκη ελέγχεται μετά την εκτέλεση των εντολών.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ΕΠΑΝΑΛΑΒΕ</span>
+    <span class="o">&lt;</span><span class="n">εντολές</span><span class="o">&gt;</span>
+<span class="n">ΜΕΧΡΙ</span> <span class="o">&lt;</span><span class="n">συνθήκη</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<section id="id6">
+<h3>Παράδειγμα χρήσης του βρόχου <strong>ΕΠΑΝΑΛΑΒΕ - ΜΕΧΡΙ</strong><a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ΕΠΑΝΑΛΑΒΕ</span>
+    <span class="n">Χ</span><span class="o">:=</span> <span class="n">Χ</span><span class="o">+</span><span class="n">Ι</span><span class="p">;</span>
+    <span class="n">ΤΥΠΩΣΕ</span> <span class="p">(</span><span class="n">Χ</span><span class="p">);</span>
+    <span class="n">Ι</span><span class="o">:=</span> <span class="n">Ι</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">ΜΕΧΡΙ</span> <span class="p">(</span><span class="n">Ι</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="control_structures.html" class="btn btn-neutral float-left" title="Δομές Ελέγχου Ροής" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="keywords.html" class="btn btn-neutral float-right" title="Λέξεις Κλειδιά" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Achilleas Makris.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

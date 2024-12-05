@@ -10,8 +10,9 @@
 
    operators
    data_types
-   keywords
    control_structures
+   vroxoi
+   keywords
    
    
 .. toctree::
@@ -20,3 +21,4 @@
    :hidden:
 
    greek_pseudocode_extension
+ 

@@ -9,7 +9,8 @@
   <title>Τελεστές &mdash; Greek Pseudocode Manual  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=578b2774" />
 
   
       <script src="_static/jquery.js?v=5d32c60e"></script>
@@ -46,13 +47,18 @@
               <p class="caption" role="heading"><span class="caption-text">Περιεχόμενα</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Τελεστές</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id2">Αριθμητικοί</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">Λογικοί</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Αριθμητικοί Τελεστές</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">Λογικοί Τελεστές</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#and">Παραδήγματα λογικού τελεστή AND</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#or">Παραδήγματα λογικού τελεστή OR</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="data_types.html">Τύποι Δεδομένων</a></li>
-<li class="toctree-l1"><a class="reference internal" href="keywords.html">Λέξεις Κλειδιά</a></li>
 <li class="toctree-l1"><a class="reference internal" href="control_structures.html">Δομές Ελέγχου Ροής</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vroxoi.html">Βρόχοι (Loops)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="keywords.html">Λέξεις Κλειδιά</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">ΕΑΠ Compiler</span></p>
 <ul>
@@ -86,7 +92,7 @@
   <section id="id1">
 <h1>Τελεστές<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
 <section id="id2">
-<h2>Αριθμητικοί<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<h2>Αριθμητικοί Τελεστές<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p>Πρόσθεση <code class="docutils literal notranslate"><span class="pre">+</span></code></p></li>
 <li><p>Αφαίρεση <code class="docutils literal notranslate"><span class="pre">-</span></code></p></li>
@@ -103,12 +109,28 @@
 </ul>
 </section>
 <section id="id3">
-<h2>Λογικοί<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<h2>Λογικοί Τελεστές<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">AND</span></code>: Λογικό ΚΑΙ</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">OR</span></code>: Λογικό Ή</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">NOT</span></code>: Λογική άρνηση</p></li>
 </ul>
+<section id="and">
+<h3>Παραδήγματα λογικού τελεστή AND<a class="headerlink" href="#and" title="Link to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ΕΑΝ</span> <span class="p">(</span><span class="n">X</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="n">AND</span> <span class="p">(</span><span class="n">X</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> <span class="n">ΤΟΤΕ</span>
+    <span class="n">X</span><span class="o">:=</span> <span class="n">X</span> <span class="o">*</span> <span class="n">Y</span><span class="p">;</span>
+<span class="n">ΕΑΝ</span><span class="o">-</span><span class="n">ΤΕΛΟΣ</span>
+</pre></div>
+</div>
+</section>
+<section id="or">
+<h3>Παραδήγματα λογικού τελεστή OR<a class="headerlink" href="#or" title="Link to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ΕΑΝ</span> <span class="p">(</span><span class="n">N</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">)</span> <span class="n">OR</span> <span class="p">(</span><span class="n">X</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="n">ΤΟΤΕ</span>
+    <span class="n">ΤΥΠΩΣΕ</span><span class="p">(</span><span class="s2">&quot;Αριθμός εκτός ορίων στην είσοδο.&quot;</span><span class="p">);</span>
+<span class="n">ΕΑΝ</span><span class="o">-</span><span class="n">ΤΕΛΟΣ</span>
+</pre></div>
+</div>
+</section>
 </section>
 </section>
 

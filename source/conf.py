@@ -29,3 +29,6 @@ html_static_path = ['_static']
 html_css_files = [
     'css/custom.css',  # path to your custom CSS file
 ]
+
+def setup(app):
+    app.add_css_file('custom.css')  

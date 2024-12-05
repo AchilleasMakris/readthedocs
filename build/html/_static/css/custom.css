@@ -40,3 +40,13 @@ ol {
     line-height: 18px;
 }
 
+.highlight pre {
+    font-size: 18px !important;  /* Προσθήκη !important για να αναγκαστεί η εφαρμογή */
+    font-weight: 600;
+    color: rgb(136, 50, 163);
+}
+
+code {
+    font-size: 1.2rem !important;
+    color: rgb(136, 50, 163) !important;
+}

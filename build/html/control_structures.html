@@ -9,7 +9,8 @@
   <title>Δομές Ελέγχου Ροής &mdash; Greek Pseudocode Manual  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=578b2774" />
 
   
       <script src="_static/jquery.js?v=5d32c60e"></script>
@@ -20,8 +21,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="ΕΑΠ Compiler &amp; Visual Studio Code" href="greek_pseudocode_extension.html" />
-    <link rel="prev" title="Λέξεις Κλειδιά" href="keywords.html" /> 
+    <link rel="next" title="Βρόχοι (Loops)" href="vroxoi.html" />
+    <link rel="prev" title="Τύποι Δεδομένων" href="data_types.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -47,8 +48,16 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="operators.html">Τελεστές</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_types.html">Τύποι Δεδομένων</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Δομές Ελέγχου Ροής</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2"><strong>ΕΑΝ</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Παράδειγμα χρήσης του <strong>ΕΑΝ</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#and">Παράδειγμα χρήσης του με λογικό <strong>AND</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="vroxoi.html">Βρόχοι (Loops)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="keywords.html">Λέξεις Κλειδιά</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Δομές Ελέγχου Ροής</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">ΕΑΠ Compiler</span></p>
 <ul>
@@ -81,18 +90,47 @@
              
   <section id="id1">
 <h1>Δομές Ελέγχου Ροής<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ΕΑΝ</span> <span class="pre">(συνθήκη)</span> <span class="pre">ΤΟΤΕ</span></code>: Έλεγχος μιας συνθήκης και εκτέλεση κώδικα αν η συνθήκη είναι αληθής.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ΑΛΛΙΩΣ</span></code>: Εκτέλεση κώδικα αν η προηγούμενη συνθήκη δεν είναι αληθής.</p></li>
-</ul>
+<section id="id2">
+<h2><strong>ΕΑΝ</strong><a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p>Η δομή <strong>ΕΑΝ</strong>  χρησιμοποιείται για να ελέγξει αν μια συνθήκη είναι αληθής και, αν είναι, να εκτελέσει το μπλοκ εντολών που ακολουθεί.
+Η δομή <strong>ΑΛΛΙΩΣ</strong> μπορεί να χρησιμοποιηθεί για να εκτελέσει έναν άλλο μπλοκ εντολών αν η συνθήκη είναι ψευδής.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ΕΑΝ</span> <span class="o">&lt;</span><span class="n">συνθήκη</span><span class="o">&gt;</span> <span class="n">ΤΟΤΕ</span>
+    <span class="o">&lt;</span><span class="n">εντολές</span> <span class="n">αν</span> <span class="n">αληθής</span><span class="o">&gt;</span>
+<span class="n">ΑΛΛΙΩΣ</span>
+    <span class="o">&lt;</span><span class="n">εντολές</span> <span class="n">αν</span> <span class="n">ψευδής</span><span class="o">&gt;</span>
+<span class="n">ΕΑΝ</span><span class="o">-</span><span class="n">ΤΕΛΟΣ</span>
+</pre></div>
+</div>
+<section id="id3">
+<h3>Παράδειγμα χρήσης του <strong>ΕΑΝ</strong><a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ΕΑΝ</span> <span class="p">(</span><span class="n">X</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> <span class="n">ΤΟΤΕ</span>
+    <span class="n">Y</span><span class="o">:=</span> <span class="n">Y</span> <span class="o">*</span> <span class="n">X</span><span class="p">;</span>
+<span class="n">ΑΛΛΙΩΣ</span>
+    <span class="n">X</span><span class="o">:=</span> <span class="n">X</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+<span class="n">ΕΑΝ</span><span class="o">-</span><span class="n">ΤΕΛΟΣ</span>
+</pre></div>
+</div>
+</section>
+<section id="and">
+<h3>Παράδειγμα χρήσης του με λογικό <strong>AND</strong><a class="headerlink" href="#and" title="Link to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ΕΑΝ</span> <span class="p">(</span><span class="n">X</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="n">AND</span> <span class="p">(</span><span class="n">X</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> <span class="n">ΤΟΤΕ</span>
+    <span class="n">Y</span><span class="o">:=</span> <span class="n">Y</span> <span class="o">*</span> <span class="n">X</span><span class="p">;</span>
+    <span class="n">X</span><span class="o">:=</span> <span class="n">X</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+<span class="n">ΑΛΛΙΩΣ</span>
+    <span class="n">Y</span><span class="o">:=</span> <span class="n">Y</span> <span class="o">+</span> <span class="n">X</span><span class="p">;</span>
+<span class="n">ΕΑΝ</span><span class="o">-</span><span class="n">ΤΕΛΟΣ</span>
+</pre></div>
+</div>
+</section>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="keywords.html" class="btn btn-neutral float-left" title="Λέξεις Κλειδιά" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="greek_pseudocode_extension.html" class="btn btn-neutral float-right" title="ΕΑΠ Compiler &amp; Visual Studio Code" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="data_types.html" class="btn btn-neutral float-left" title="Τύποι Δεδομένων" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="vroxoi.html" class="btn btn-neutral float-right" title="Βρόχοι (Loops)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

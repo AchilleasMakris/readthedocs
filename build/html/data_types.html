@@ -9,7 +9,8 @@
   <title>Τύποι Δεδομένων &mdash; Greek Pseudocode Manual  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=578b2774" />
 
   
       <script src="_static/jquery.js?v=5d32c60e"></script>
@@ -20,7 +21,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Λέξεις Κλειδιά" href="keywords.html" />
+    <link rel="next" title="Δομές Ελέγχου Ροής" href="control_structures.html" />
     <link rel="prev" title="Τελεστές" href="operators.html" /> 
 </head>
 
@@ -46,9 +47,13 @@
               <p class="caption" role="heading"><span class="caption-text">Περιεχόμενα</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="operators.html">Τελεστές</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Τύποι Δεδομένων</a></li>
-<li class="toctree-l1"><a class="reference internal" href="keywords.html">Λέξεις Κλειδιά</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Τύποι Δεδομένων</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Παράδηγμα δήλωσης Τύπων Δεδομένων</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="control_structures.html">Δομές Ελέγχου Ροής</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vroxoi.html">Βρόχοι (Loops)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="keywords.html">Λέξεις Κλειδιά</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">ΕΑΠ Compiler</span></p>
 <ul>
@@ -81,12 +86,27 @@
              
   <section id="id1">
 <h1>Τύποι Δεδομένων<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
+<p>Οι τύποι δεδομένων χρησιμοποιούνται για να προσδιορίσουν το είδος της πληροφορίας που αποθηκεύεται σε μία μεταβλητή. Ο τύπος δεδομένων καθορίζει ποια λειτουργία μπορεί να εφαρμοστεί σε αυτήν και ποιο μέγεθος ή εύρος τιμών μπορεί να πάρει.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">INTEGER</span></code>: Ακέραιος</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">REAL</span></code>: Πραγματικός</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">BOOLEAN</span></code>: Δυαδικές (Boolean) Μεταβλητές</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ARRAY</span> <span class="pre">[1..N]</span> <span class="pre">OF</span> <span class="pre">τύπος</span></code>: Πίνακας</p></li>
 </ul>
+<section id="id2">
+<h2>Παράδηγμα δήλωσης Τύπων Δεδομένων<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ΑΛΓΟΡΙΘΜΟΣ</span> <span class="n">dilosi_metavlitwn</span>
+<span class="n">ΔΕΔΟΜΕΝΑ</span>
+    <span class="n">X</span><span class="p">:</span> <span class="n">INTEGER</span><span class="p">;</span>
+    <span class="n">Y</span><span class="p">:</span> <span class="n">REAL</span><span class="p">;</span>
+    <span class="n">T</span><span class="p">:</span> <span class="n">BOOLEAN</span><span class="p">;</span>
+    <span class="n">X</span><span class="p">:</span> <span class="n">ARRAY</span><span class="p">[</span><span class="mf">1..8</span><span class="p">]</span> <span class="n">OF</span> <span class="n">REAL</span><span class="p">;</span>
+<span class="n">ΑΡΧΗ</span>
+    <span class="o">...</span>
+<span class="n">ΤΕΛΟΣ</span>
+</pre></div>
+</div>
+</section>
 </section>
 
 
@@ -94,7 +114,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="operators.html" class="btn btn-neutral float-left" title="Τελεστές" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="keywords.html" class="btn btn-neutral float-right" title="Λέξεις Κλειδιά" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="control_structures.html" class="btn btn-neutral float-right" title="Δομές Ελέγχου Ροής" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
