@@ -1,3 +1,4 @@
+@import 'sphinx_rtd_theme';
 /* Apply Roboto font to the whole body */
 body {
     font-family: 'Roboto', sans-serif;
