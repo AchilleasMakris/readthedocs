@@ -29,4 +29,3 @@ html_static_path = ['_static']
 html_css_files = [
     'css/custom.css',  # path to your custom CSS file
 ]
-html_style = 'css/custom.css'
