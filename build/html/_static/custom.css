@@ -6,47 +6,47 @@ body {
 /* Make inline code larger and use Roboto font */
 code {
     font-size: 1.5em;  /* Adjust the size for inline code */
-    font-family: 'Roboto', sans-serif;  /* Apply Roboto to inline code */
+    font-family: 'Roboto', sans-serif !important;  /* Apply Roboto to inline code */
 }
 
 /* Make all headings larger */
 h1 {
-    font-size: 36px;  /* Heading level 1 */
-    color: #0d6efd; /* Light blue from manual.cs50.io */
-    font-weight: bold;
+    font-size: 36px !important;  /* Heading level 1 */
+    color: #0d6efd !important; /* Light blue from manual.cs50.io */
+    font-weight: bold !important;
 }
 
 
 /* Styling for list items */
 ul li {
-    font-size: 1.1rem;  /* Adjust the size as needed */
-    line-height: 18px;
+    font-size: 1.1rem !important;  /* Adjust the size as needed */
+    line-height: 18px !important;
     
 }
 
 ul, ol {
-    font-weight: bold; /* Bold font for list items */
-    line-height: 18px;
-    text-transform: none;
+    font-weight: bold !important; /* Bold font for list items */
+    line-height: 18px !important;
+    text-transform: none !important;
 }
 
 /* Specific styling for unordered lists */
 ul {
-    line-height: 18px;
+    line-height: 18px !important;
 }
 /* Remove numbers from ordered lists (ol) */
 ol {
-    list-style-type: none;  /* Removes numbering */
-    line-height: 18px;
+    list-style-type: none !important;  /* Removes numbering */
+    line-height: 18px !important;
 }
 
 .highlight pre {
     font-size: 18px !important;  /* Προσθήκη !important για να αναγκαστεί η εφαρμογή */
-    font-weight: 600;
-    color: rgb(136, 50, 163);
+    font-weight: 600 !important;
+    color: rgb(136, 50, 163) !important;
 }
 
 code {
-    font-size: 1.2rem !important;
+    font-size: 1rem !important;
     color: rgb(136, 50, 163) !important;
 }
